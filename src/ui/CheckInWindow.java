@@ -20,8 +20,8 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class CheckoutWindow extends Stage implements LibWindow {
-	public static final CheckoutWindow INSTANCE = new CheckoutWindow();
+public class CheckInWindow extends Stage implements LibWindow {
+	public static final CheckInWindow INSTANCE = new CheckInWindow();
 	
 	private boolean isInitialized = false;
 	
@@ -35,7 +35,7 @@ public class CheckoutWindow extends Stage implements LibWindow {
 	public void clear() {
 		messageBar.setText("");
 	}
-    private CheckoutWindow () {}
+    private CheckInWindow () {}
     public void init() {
         
         GridPane grid = new GridPane();
@@ -45,7 +45,7 @@ public class CheckoutWindow extends Stage implements LibWindow {
         grid.setVgap(10);
         grid.setPadding(new Insets(25, 25, 25, 25));
 
-        Text scenetitle = new Text("Checkout");
+        Text scenetitle = new Text("CheckIn");
         scenetitle.setFont(Font.font("Harlow Solid Italic", FontWeight.NORMAL, 20)); //Tahoma
         grid.add(scenetitle, 0, 0, 2, 1);
 

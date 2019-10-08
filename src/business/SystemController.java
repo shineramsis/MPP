@@ -26,6 +26,20 @@ public class SystemController implements ControllerInterface {
 		currentAuth = map.get(id).getAuthorization();
 		
 	}
+	public void Checkout(String MemberID, String ISBN) throws CheckoutException {
+		DataAccess da = new DataAccessFacade();
+		HashMap<String, LibraryMember> map2 = da.readMemberMap();
+		if(!map2.containsKey(MemberID)) {
+			throw new CheckoutException("MemberID " + MemberID + " not found");
+		}
+		HashMap<String, Book> map = da.readBooksMap();
+		if(!map.containsKey(ISBN)) {
+			throw new CheckoutException("ISBN no. " + ISBN + " not found");
+		}
+		//DataAccess da2 = new DataAccessFacade();
+		
+		
+	}
 	@Override
 	public List<String> allMemberIds() {
 		DataAccess da = new DataAccessFacade();

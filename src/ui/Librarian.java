@@ -41,7 +41,8 @@ public class Librarian extends Application {
 	private static Stage[] allWindows = { 
 		LoginWindow.INSTANCE,
 		AllMembersWindow.INSTANCE,	
-		AllBooksWindow.INSTANCE
+		AllBooksWindow.INSTANCE,
+		CheckoutWindow.INSTANCE
 	};
 	
 	public static void hideAllWindows() {
