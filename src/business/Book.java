@@ -88,7 +88,7 @@ final public class Book implements Serializable {
 	
 	public BookCopy getCopy(int copyNum) {
 		
-		return null;
+		return copies[copyNum-1];
 	}
 	public int getMaxCheckoutLength() {
 		return maxCheckoutLength;
